@@ -13,7 +13,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 80%;
+  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -102,6 +102,13 @@ body {
   background-color: blue;
 }
 
+.card {
+  background-color: darkgray;
+  padding: 20px;
+  color: black;
+  margin: 20px;
+}
+
 #menuIcon {
   position: absolute;
   width: 50px;
@@ -115,7 +122,7 @@ body {
     width: 30px;
     height: 30px;
     background-color: grey;
-    position: absolute;
+    position: relative;
   }
 }
 /*# sourceMappingURL=custom.css.map */

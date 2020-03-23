@@ -43,7 +43,7 @@ body {
 .container {
     
     @include FlexCenter(row);
-    width: 80%;
+    width: 100%;
     justify-content: center;
     margin: 0 auto;
 
@@ -111,6 +111,13 @@ body {
 
 .menu:hover{
     background-color: blue;
+}
+
+.card{
+    background-color: darkgray;
+    padding: 20px;
+    color: black;
+    margin: 20px;
 }
 
 #menuIcon{
