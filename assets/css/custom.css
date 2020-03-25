@@ -50,6 +50,10 @@ body {
 .content.content-body p {
   font-size: 15px;
   color: black;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: width 2s;
+  transition: width 2s;
 }
 
 .nav-top {
@@ -76,6 +80,11 @@ body {
 
 .nav-top ul li a:hover {
   background-color: #ffa000;
+}
+
+.nav-top ul li a:target {
+  visibility: visible;
+  opacity: 1;
 }
 
 .nav-top ul li img {

@@ -54,10 +54,14 @@ body{
         padding: 5px;
         color: white;
         grid-template-columns: repeat(3, 1fr);
-
+        
+       
         & p {
             font-size: 15px;
             color: black;
+            visibility: hidden;
+            opacity: 0;
+            transition: width 2s;
         }
     }
 }
@@ -78,9 +82,13 @@ body{
                 padding: 15px;
                 color: white;
                 text-decoration: none;
-        
+
                 &:hover{
                     background-color: #ffa000  ;
+                }
+                &:target {
+                    visibility: visible;
+                    opacity: 1;
                 }
             }
             & img{
