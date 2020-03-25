@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: roboto, sans-serif;
-  background-color: #ffffff;
+  background-color: #fff8f0;
 }
 
 .container {
@@ -38,37 +38,22 @@ body {
   }
 }
 
-.card {
+.content.content-body {
   display: -ms-grid;
   display: grid;
-  background-color: #e0e0e0;
   padding: 5px;
   color: white;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
-.card p {
+.content.content-body p {
   font-size: 15px;
   color: black;
 }
 
-.card.card-logo {
-  padding: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 127px;
-  height: 127;
-}
-
-.card:hover {
-  background-color: #9e9e9e;
-}
-
 .nav-top {
-  background-color: #424242;
+  background-color: #ff8f00;
 }
 
 .nav-top ul {
@@ -90,7 +75,7 @@ body {
 }
 
 .nav-top ul li a:hover {
-  background-color: #42a5f5;
+  background-color: #ffa000;
 }
 
 .nav-top ul li img {
@@ -103,8 +88,70 @@ body {
 }
 
 @media (max-width: 500px) {
-  .nav-top ul li {
-    float: right;
+  .nav-top ul {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
+}
+
+.banner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  height: 450px;
+  background-color: #ffb74d;
+}
+
+@media (max-width: 500px) {
+  .banner {
+    height: 150px;
+  }
+}
+
+.banner h1 {
+  font-size: 60px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+@media (max-width: 500px) {
+  .banner h1 {
+    font-size: 25px;
+    padding-top: 30px;
+  }
+}
+
+.menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  height: 250px;
+  background-color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 500px) {
+  .menu {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100px;
+  }
+  .menu .nav-logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.active {
+  background-color: wheat;
 }
 /*# sourceMappingURL=custom.css.map */
