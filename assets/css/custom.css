@@ -1,29 +1,7 @@
 body {
   margin: 0;
   font-family: GillSans, Calibri, Trebuchet, sans-serif;
-  background-color: #b2dfdb;
-}
-
-ul#nav-item {
-  min-width: 696px;
-  list-style: none;
-  padding-top: 20px;
-}
-
-li {
-  display: inline;
-}
-
-li a {
-  text-decoration: none;
-  padding-right: 10px;
-  font-size: 17px;
-  color: white;
-}
-
-li a:hover {
-  font-weight: bold;
-  background-color: #4FC3F7;
+  background-color: white;
 }
 
 nav {
@@ -36,8 +14,29 @@ nav {
   width: 100%;
 }
 
+nav ul#nav-item {
+  min-width: 696px;
+  list-style: none;
+  padding-top: 20px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li a {
+  text-decoration: none;
+  padding-right: 24px;
+  font-size: 17px;
+  color: white;
+}
+
+nav li a:hover {
+  font-weight: bold;
+}
+
 .solid {
-  background-color: black;
+  background-color: #ef9a9a;
 }
 
 banner {
@@ -48,13 +47,20 @@ banner {
       grid-template-columns: 1fr;
   -ms-grid-rows: 50px auto;
       grid-template-rows: 50px auto;
-  background: black url("../img/bg.jpg");
+  height: 450px;
+  color: #ffffff;
+}
+
+banner .bg {
+  background: brown url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   opacity: 0.9;
-  height: 450px;
-  color: #ffffff;
+  width: 100%;
+  height: inherit;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
 }
 
 @media (max-width: 500px) {
@@ -64,10 +70,10 @@ banner {
 }
 
 .banner-content {
-  padding: 10px;
   margin: 20px;
   text-align: center;
-  color: black;
+  color: white;
+  z-index: 1;
 }
 
 content {
@@ -86,7 +92,7 @@ content .about {
   display: grid;
   -ms-grid-columns: 400px auto;
       grid-template-columns: 400px auto;
-  background-color: #00897b;
+  background-color: #ef5350;
   height: auto;
   text-align: center;
   padding: 20px;
@@ -142,7 +148,7 @@ content .project .card {
   display: grid;
   -ms-grid-rows: 50px auto 50px;
       grid-template-rows: 50px auto 50px;
-  background-color: #00796b;
+  background-color: #ef5350;
   color: white;
   -webkit-box-shadow: 0 9px 10px -6px black;
           box-shadow: 0 9px 10px -6px black;
@@ -217,7 +223,7 @@ content .contact {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  background-color: #00796b;
+  background-color: #ef5350;
   text-align: center;
   color: white;
   height: auto;

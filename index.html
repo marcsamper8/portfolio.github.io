@@ -11,6 +11,7 @@
 </head>
 <body>
     <banner>
+        <img class="bg" src="./assets/img/bg.jpg">
         <nav class="nav-bar"> 
             <ul class="nav-item"> 
                 <li><a href="#about">About</a></li>
@@ -19,11 +20,10 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-            <div class="banner-content">
+        <div class="banner-content">
                 <h1>Hello World</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ab! Nobis, sint cum blanditiis nostrum, molestiae totam expedita autem iusto sed laboriosam magnam vel quo itaque fuga aperiam laborum qui!</p>
-            </div>
-
+        </div>
     </banner>
     <content>
         <section class="about" id="#about">
@@ -102,12 +102,14 @@
 $(document).ready(function() {
         // Transition effect for navbar 
         $(window).scroll(function() {
-          // checks if window is scrolled more than 500px, adds/removes solid class
-          if($(this).scrollTop() > 200) { 
+            let scrollAmt = $(this).scrollTop();
+          if(scrollAmt > 200) { 
               $('.nav-bar').addClass('solid');
           } else {
               $('.nav-bar').removeClass('solid');
           }
+
+
         });
 });
 </script>
