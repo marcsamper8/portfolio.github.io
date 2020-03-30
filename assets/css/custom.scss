@@ -187,20 +187,25 @@ content {
             .skills-label{
                 text-align: center;
             }
-            .skill-content{
+            .skills-content{
+                display: grid;
+                grid-template-columns: repeat(9,1fr);
+                padding: 15px;
+                justify-content: end;
                 @include mobile(500px){
                     display: grid;
-                    grid-template-columns: repeat(10,1fr);
+                    grid-template-columns: repeat(4,1fr);
+                    grid-template-rows: repeat(2,1fr);
                     justify-items: center;
                     align-items: center;
                     text-align: center;
                  }
+            }
 
-                 .skill-icon {
-                    @include mobile(500px){
-                       width: 100px;
-                       height: 100px;
-                    }
+            .skill-icon {
+                @include mobile(500px){
+                   width: 75px;
+                   height: 75px;
                 }
             }
         }
@@ -214,6 +219,8 @@ content {
             padding: 5px;
         }
 }
+
+
 
 
 
