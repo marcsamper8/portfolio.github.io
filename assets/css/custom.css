@@ -15,7 +15,6 @@ li {
 
 li a {
   text-decoration: none;
-  color: black;
   padding-right: 10px;
   font-size: 17px;
   color: white;
@@ -27,34 +26,52 @@ li a:hover {
 }
 
 nav {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  background-color: #64B5F6;
+  width: inherit;
+  background: rgba(2, 2, 2, 0.2);
+  -webkit-transition: background-color 1s ease 0s;
+  transition: background-color 1s ease 0s;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+
+.solid {
+  background-color: black;
 }
 
 banner {
+  z-index: 99;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  background-color: #81D4FA;
-  height: 350px;
+  -ms-grid-rows: 50px auto;
+      grid-template-rows: 50px auto;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  height: 450px;
+  color: #ffffff;
 }
 
-banner div {
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
+banner .banner-content {
+  margin-top: 30px;
 }
 
 @media (max-width: 500px) {
   banner {
-    display: -ms-grid;
-    display: grid;
     height: 250px;
   }
+}
+
+.banner-content {
+  z-index: -1;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
 }
 
 content {
