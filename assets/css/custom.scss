@@ -17,9 +17,14 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  }
+
 body{
     margin: 0 ;
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+   
     background-color: white;
 }
 
@@ -76,6 +81,7 @@ banner {
         width: 100%;
         height: inherit;
         filter: blur(2px);
+        
     }
    
     @include mobile(500px){
@@ -87,7 +93,10 @@ banner {
     margin: 20px;
     text-align: center;
     color: white; 
+    padding-bottom: 15px;
     z-index: 1;
+    
+    
 }
 
 content {
@@ -124,18 +133,34 @@ content {
                 height: 250px;
                 border-radius: 100% ;
                 border: 4px solid white;
-
-
             }
          
         }
         
         .project{
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
             margin: 15px;
             grid-gap: 1em;
-            //height: 350px;
+            //height: auto;
+
+            .project-header {
+                text-align: center;
+            }
+
+            .project-body {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 1em;
+      
+
+                @include mobile(500px){
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(3, 1fr);
+            
+                }
+            }
 
             
             @include mobile(500px){
@@ -183,15 +208,17 @@ content {
             display: grid;
             grid-template-rows: 120px auto;
             padding: 15px;
+      
            
             .skills-label{
                 text-align: center;
             }
             .skills-content{
                 display: grid;
-                grid-template-columns: repeat(9,1fr);
+                grid-template-columns: repeat(8,1fr);
                 padding: 15px;
-                justify-content: end;
+                align-content: center;
+                justify-content: center;
                 @include mobile(500px){
                     display: grid;
                     grid-template-columns: repeat(4,1fr);
@@ -211,12 +238,19 @@ content {
         }
         .contact {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(4,1fr);
             background-color: #ef5350;
             text-align: center;
             color: white;
-            height: auto;
-            padding: 5px;
+            height: 100px;
+            
+
+            img {
+                width: 50px;
+                height: 50px;
+                justify-self: center;
+                align-self: center;
+            }
         }
 }
 

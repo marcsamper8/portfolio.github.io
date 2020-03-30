@@ -1,6 +1,10 @@
+html {
+  scroll-behavior: smooth;
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: GillSans, Calibri, Trebuchet, sans-serif;
   background-color: white;
 }
 
@@ -73,6 +77,7 @@ banner .bg {
   margin: 20px;
   text-align: center;
   color: white;
+  padding-bottom: 15px;
   z-index: 1;
 }
 
@@ -128,10 +133,33 @@ content .about img {
 content .project {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
   margin: 15px;
   grid-gap: 1em;
+}
+
+content .project .project-header {
+  text-align: center;
+}
+
+content .project .project-body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+
+@media (max-width: 500px) {
+  content .project .project-body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 500px) {
@@ -200,12 +228,14 @@ content .skills .skills-label {
 content .skills .skills-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[9];
-      grid-template-columns: repeat(9, 1fr);
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
   padding: 15px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 500px) {
@@ -234,12 +264,21 @@ content .skills .skills-content {
 content .contact {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   background-color: #ef5350;
   text-align: center;
   color: white;
-  height: auto;
-  padding: 5px;
+  height: 100px;
+}
+
+content .contact img {
+  width: 50px;
+  height: 50px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=custom.css.map */
