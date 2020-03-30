@@ -97,11 +97,14 @@
             <img class="skill-icon" src="assets/img/in.png" alt="test" >
 
         </section>
+
+        <button id="scrollup"><img src="./assets/img/up.png"></button>
     </content>
 </body>
 
 <script>
-    
+    const btnScrollToTop = document.querySelector("#scrollup");
+
 $(document).ready(function() {
         // Transition effect for navbar 
         $(window).scroll(function() {
@@ -110,6 +113,7 @@ $(document).ready(function() {
               $('.nav-bar').addClass('solid');
           } else {
               $('.nav-bar').removeClass('solid');
+              $('#scrollup').css("style", "display:none");
           }
 
 
@@ -140,5 +144,11 @@ $(document).ready(function(){
     } // End if
   });
 });
+
+btnScrollToTop.addEventListener("click", function(){
+    window.scroll(0,0);
+});
+
+
 </script>
 </html>
