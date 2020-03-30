@@ -171,9 +171,33 @@ content {
         grid-gap: 5px;
            
         .about {
+            display: grid;
+            grid-template-columns: 400px auto;
             background-color: pink;
             height: auto;
-            padding: 15px;
+            text-align: center;
+            padding: 20px;
+
+            .profile{
+                @include mobile(500px){
+                    height: 1px;
+                }
+            }
+
+            @include mobile(500px){
+                grid-template-columns: 1fr;
+                grid-template-rows: 250px auto;
+            }
+
+            img {
+                width: 250px;
+                height: 250px;
+                border-radius: 100% ;
+                border: 4px solid white;
+
+
+            }
+         
         }
         
         .project{
@@ -237,8 +261,10 @@ content {
             .skill-content{
                 @include mobile(500px){
                     display: grid;
-                    grid-template-rows: repeat(2,1fr);
-
+                    grid-template-columns: repeat(10,1fr);
+                    justify-items: center;
+                    align-items: center;
+                    text-align: center;
                  }
 
                  .skill-icon {
@@ -250,9 +276,13 @@ content {
             }
         }
         .contact {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
             background-color: burlywood;
+            text-align: center;
+            color: white;
             height: auto;
-            padding: 15px;
+            padding: 5px;
         }
 }
 
