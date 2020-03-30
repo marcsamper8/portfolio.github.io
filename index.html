@@ -111,9 +111,10 @@ $(document).ready(function() {
             let scrollAmt = $(this).scrollTop();
           if(scrollAmt > 200) { 
               $('.nav-bar').addClass('solid');
+              $('#scrollup').show();
           } else {
               $('.nav-bar').removeClass('solid');
-              $('#scrollup').css("style", "display:none");
+              $('#scrollup').hide();
           }
 
 
