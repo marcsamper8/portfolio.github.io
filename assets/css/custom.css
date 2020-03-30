@@ -49,21 +49,29 @@ banner div {
   text-align: center;
 }
 
+@media (max-width: 500px) {
+  banner {
+    display: -ms-grid;
+    display: grid;
+    height: 250px;
+  }
+}
+
 content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: (1fr)[6];
-      grid-template-rows: repeat(6, 1fr);
-  grid-auto-rows: minmax(250px, 600px);
-  height: 250px;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  height: 500px;
   grid-gap: 5px;
 }
 
 content .about {
   background-color: pink;
-  height: 250px;
+  height: auto;
+  padding: 15px;
 }
 
 content .project {
@@ -74,7 +82,6 @@ content .project {
   background-color: white;
   margin: 15px;
   grid-gap: 1em;
-  height: 350px;
 }
 
 @media (max-width: 500px) {
@@ -91,11 +98,12 @@ content .project .card {
   display: grid;
   -ms-grid-rows: 50px auto 50px;
       grid-template-rows: 50px auto 50px;
-  background-color: #90CAF9;
+  background-color: powderblue;
+  border-radius: 10px;
+  color: black;
 }
 
 content .project .card .card-header {
-  background-color: #0D47A1;
   text-align: center;
 }
 
@@ -104,17 +112,59 @@ content .project .card .card-body {
 }
 
 content .project .card .card-footer {
-  background-color: #0D47A1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   text-align: center;
+  padding: 5px;
+  border-top: 1px solid white;
+}
+
+content .project .card .card-footer p:hover {
+  background-color: powderblue;
+  cursor: pointer;
+}
+
+content .project .card .card-footer .icon-footer {
+  width: 30px;
+  height: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 content .skills {
-  background-color: red;
-  height: 250px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 120px auto;
+      grid-template-rows: 120px auto;
+  padding: 15px;
+}
+
+content .skills .skills-label {
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  content .skills .skill-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  content .skills .skill-content .skill-icon {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 content .contact {
   background-color: burlywood;
-  height: 250px;
+  height: auto;
+  padding: 15px;
 }
 /*# sourceMappingURL=custom.css.map */
