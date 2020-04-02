@@ -39,6 +39,12 @@ nav li a {
   color: white;
 }
 
+@media (max-width: 500px) {
+  nav li a {
+    padding-right: 10px;
+  }
+}
+
 nav li a:hover {
   font-weight: bold;
 }

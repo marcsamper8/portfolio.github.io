@@ -54,6 +54,9 @@ nav {
                 font-size: 17px;
                 color: white;
 
+                @include mobile(500px){
+                    padding-right: 10px;
+                }
          
                 &:hover{
                     font-weight: bold;
