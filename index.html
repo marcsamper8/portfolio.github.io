@@ -13,6 +13,7 @@
     <banner>
         <img class="bg" src="./assets/img/bg.jpg">
         <nav class="nav-bar"> 
+            <img class="nav-logo" src="./assets/img/a.png" alt="nav logo">
             <ul class="nav-item"> 
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">Project</a></li>
@@ -47,8 +48,14 @@
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis expedita adipisci neque ab quidem fugiat eum minima, hic sapiente nulla ipsam illo repellat quae quod voluptate excepturi odio consequatur a incidunt! Magni, minima laborum ipsa obcaecati ducimus necessitatibus itaque nobis beatae veritatis, quam laudantium odio fugiat consequuntur similique libero temporibus?</p>
                     </div>
                     <div class="card-footer">
-                        <p>Live Demo</p>
-                        <p>Github</p>
+                        <div class="view">
+                            <img class="card-button-logo" src="/assets/img/eye.png"alt="eye logo">
+                            <p> Live Demo</p>
+                        </div>
+                        <div class="github">
+                            <img class="card-button-logo" src="/assets/img/git.png"alt="eye logo">
+                            <p>Github</p>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -57,8 +64,14 @@
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis expedita adipisci neque ab quidem fugiat eum minima, hic sapiente nulla ipsam illo repellat quae quod voluptate excepturi odio consequatur a incidunt! Magni, minima laborum ipsa obcaecati ducimus necessitatibus itaque nobis beatae veritatis, quam laudantium odio fugiat consequuntur similique libero temporibus?</p>
                     </div>
                     <div class="card-footer">
-                        <p>Live Demo</p>
-                        <p>Github</p>
+                        <div class="view">
+                            <img class="card-button-logo" src="/assets/img/eye.png"alt="eye logo">
+                            <p> Live Demo</p>
+                        </div>
+                        <div class="github">
+                            <img class="card-button-logo" src="/assets/img/git.png"alt="eye logo">
+                            <p>Github</p>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -67,8 +80,14 @@
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis expedita adipisci neque ab quidem fugiat eum minima, hic sapiente nulla ipsam illo repellat quae quod voluptate excepturi odio consequatur a incidunt! Magni, minima laborum ipsa obcaecati ducimus necessitatibus itaque nobis beatae veritatis, quam laudantium odio fugiat consequuntur similique libero temporibus?</p>
                     </div>
                     <div class="card-footer">
-                        <p>Live Demo</p>
-                        <p>Github</p>
+                        <div class="view">
+                            <img class="card-button-logo" src="/assets/img/eye.png"alt="eye logo">
+                            <p> Live Demo</p>
+                        </div>
+                        <div class="github">
+                            <img class="card-button-logo" src="/assets/img/git.png"alt="eye logo">
+                            <p>Github</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -103,9 +122,11 @@
 </body>
 
 <script>
-    const btnScrollToTop = document.querySelector("#scrollup");
+
+const btnScrollToTop = document.querySelector("#scrollup");
 
 $(document).ready(function() {
+      
         // Transition effect for navbar 
         $(window).scroll(function() {
             let scrollAmt = $(this).scrollTop();
@@ -149,6 +170,8 @@ $(document).ready(function(){
 btnScrollToTop.addEventListener("click", function(){
     window.scroll(0,0);
 });
+
+
 
 
 </script>
