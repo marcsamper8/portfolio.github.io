@@ -65,15 +65,15 @@
                               <div class="text">Caption Three</div>
                             </div>
                             
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <a class="prev" onclick="plusSlides(-1,'mySlides')">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1,'mySlides')">&#10095;</a>
                             
                             </div>
                             
                             <div style="text-align:center">
-                              <span class="dot" onclick="currentSlide(1)"></span> 
-                              <span class="dot" onclick="currentSlide(2)"></span> 
-                              <span class="dot" onclick="currentSlide(3)"></span> 
+                              <span class="dot" onclick="currentSlide(1,'mySlides')"></span> 
+                              <span class="dot" onclick="currentSlide(2,'mySlides')"></span> 
+                              <span class="dot" onclick="currentSlide(3,'mySlides')"></span> 
                             </div> 
                     </div>
                     <div class="card-footer">
@@ -110,15 +110,15 @@
                               <div class="text">Caption Three</div>
                             </div>
                             
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <a class="prev" onclick="plusSlides(-1,'mySlides2')">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1,'mySlides2')">&#10095;</a>
                             
                             </div>
                             
                             <div style="text-align:center">
-                              <span class="dot" onclick="currentSlide(1)"></span> 
-                              <span class="dot" onclick="currentSlide(2)"></span> 
-                              <span class="dot" onclick="currentSlide(3)"></span> 
+                              <span class="dot" onclick="currentSlide(1,'mySlides2')"></span> 
+                              <span class="dot" onclick="currentSlide(2,'mySlides2')"></span> 
+                              <span class="dot" onclick="currentSlide(3,'mySlides2')"></span> 
                             </div> 
                     </div>
                     <div class="card-footer">
@@ -155,15 +155,15 @@
                               <div class="text">Caption Three</div>
                             </div>
                             
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <a class="prev" onclick="plusSlides(-1,'mySlides3')">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1,'mySlides3')">&#10095;</a>
                             
                             </div>
                             
                             <div style="text-align:center">
-                              <span class="dot" onclick="currentSlide(1)"></span> 
-                              <span class="dot" onclick="currentSlide(2)"></span> 
-                              <span class="dot" onclick="currentSlide(3)"></span> 
+                              <span class="dot" onclick="currentSlide(1,'mySlides3')"></span> 
+                              <span class="dot" onclick="currentSlide(2,'mySlides3')"></span> 
+                              <span class="dot" onclick="currentSlide(3,'mySlides3')"></span> 
                             </div> 
                     </div>
                     <div class="card-footer">
@@ -263,16 +263,13 @@ showSlides(slideIndex,"mySlides");
 showSlides(slideIndex,"mySlides2");
 showSlides(slideIndex,"mySlides3");
 
-function plusSlides(n) {
-  showSlides(slideIndex += n,"mySlides");
-  showSlides(slideIndex += n,"mySlides2");
-  showSlides(slideIndex += n,"mySlides3");
+function plusSlides(n,id) {
+  showSlides(slideIndex += n,id);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n,"mySlides");
-  showSlides(slideIndex = n,"mySlides2");
-  showSlides(slideIndex = n,"mySlides3");
+function currentSlide(n,id) {
+  showSlides(slideIndex = n,id);
+
 }
 
 function showSlides(n,className) {
