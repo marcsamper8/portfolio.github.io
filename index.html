@@ -12,7 +12,7 @@
 <body>
     <banner>
         <img class="bg" src="./assets/img/bg.jpg">
-        <nav class="nav-bar"> 
+        <!-- <nav class="nav-bar"> 
             <img class="nav-logo" src="./assets/img/a.png" alt="nav logo">
             <ul class="nav-item"> 
                 <li><a href="#about">About</a></li>
@@ -20,10 +20,25 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </nav> -->
         <div class="banner-content">
-                <h1>Hello World</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ab! Nobis, sint cum blanditiis nostrum, molestiae totam expedita autem iusto sed laboriosam magnam vel quo itaque fuga aperiam laborum qui!</p>
+            <div class="title"><p id="test"></p></div>
+            <div class="role">Web Developer</div>
+
+                <div class="row">
+                  <div class="col">
+                    <img src="./assets/img/fb.png"  class="header-icons">
+                  </div>
+                  <div class="col">
+                    <img  src="./assets/img/linkdn-logo.png" class="header-icons">
+                  </div>
+                  <div class="col">
+                    <img  src="./assets/img/twit.png" class="header-icons">
+                  </div>
+                  <div class="col">
+                    <img src="./assets/img/git.png" class="header-icons" >
+                  </div>
+              </div>
         </div>
     </banner>
     <content>
@@ -32,6 +47,7 @@
             <div>
                 <h1>ABOUT ME</h1>
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, omnis rerum quas reiciendis explicabo repellendus et deserunt. Cupiditate, accusamus ex! Sit assumenda, natus facere voluptatem laborum ratione. Dolor est sed consectetur doloribus repellendus facilis sit qui adipisci praesentium odit itaque veniam, harum, accusamus et explicabo dolore id consequuntur voluptatem! Maiores possimus aperiam exercitationem dolores tempore veniam ut. Temporibus sequi recusandae molestiae possimus placeat. Voluptate quam odio asperiores optio ipsam, porro eaque deleniti ipsa impedit id doloribus ea eum quaerat quibusdam autem cum necessitatibus laborum tempore ullam consectetur dolore! Odit soluta velit expedita quod veniam nam similique amet ratione. Facere ullam sed tempora temporibus error, voluptatem maiores porro sunt nesciunt veritatis praesentium nisi consequuntur illo perferendis vel, provident molestiae aut maxime voluptatibus eos minima. Exercitationem esse eius dolor eos dolorem magnam quisquam inventore iste cum, iusto quae, aperiam nisi ullam consequatur eligendi, possimus quam explicabo quia delectus illum quasi odio! Similique.</p>
+     
             </div>
             
            
@@ -216,84 +232,23 @@
 </body>
 
 <script>
+var i = 0;
+var txt = 'Marc Ahlen Samper';
+var speed = 50;
 
-const btnScrollToTop = document.querySelector("#scrollup");
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("test").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+    console.log(txt.charAt(i));
+  }
+}
+
 
 $(document).ready(function() {
-      
-        // Transition effect for navbar 
-        $(window).scroll(function() {
-            let scrollAmt = $(this).scrollTop();
-          if(scrollAmt > 200) { 
-              $('.nav-bar').addClass('solid');
-              $('#scrollup').show();
-          } else {
-              $('.nav-bar').removeClass('solid');
-              $('#scrollup').hide();
-          }
-
-
-        });
+  typeWriter();
 });
-
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-
-btnScrollToTop.addEventListener("click", function(){
-    window.scroll(0,0);
-});
-
-var slideIndex = 1;
-showSlides(slideIndex,"mySlides");
-showSlides(slideIndex,"mySlides2");
-showSlides(slideIndex,"mySlides3");
-
-function plusSlides(n,id) {
-  showSlides(slideIndex += n,id);
-}
-
-function currentSlide(n,id) {
-  showSlides(slideIndex = n,id);
-
-}
-
-function showSlides(n,className) {
-  var i;
-  var slides = document.getElementsByClassName(className);
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
 
 </script>
 </html>

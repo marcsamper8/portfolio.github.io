@@ -8,8 +8,21 @@ const fn = {
    },
    toDarkTheme : () => {
 
+   },
+   typeWriterEffect : () => {
+    if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
    }
 };
+
+
+
+
+
+
 
 
 
